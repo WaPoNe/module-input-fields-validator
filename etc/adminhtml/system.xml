@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="wapone" translate="label" sortOrder="130">
+            <label>WaPoNe</label>
+        </tab>
+        <section id="wapone_ifv" translate="label" sortOrder="1"
+                 showInDefault="1" showInWebsite="0" showInStore="0">
+            <class>separator-top</class>
+            <label>Input Fields Validator</label>
+            <tab>wapone</tab>
+            <resource>WaPoNe_InputFieldsValidator::wapone_ifv_config</resource>
+            <!-- Configuration -->
+            <group id="configuration" translate="label" type="text" sortOrder="10"
+                   showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable WaPoNe_InputFieldsValidator extension</comment>
+                </field>
+                <field id="regex" translate="label comment" type="text" sortOrder="20"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Regular Expression</label>
+                    <comment>
+                        <![CDATA[
+                            The regular expression to use to reject some characters.
+                            Default is '/[{}<>%]/' to reject characters like: { } < > %
+                        ]]>
+                    </comment>
+                    <depends>
+                        <field id="wapone_ifv/configuration/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="limit" translate="label comment" type="text" sortOrder="30"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Characters Limit</label>
+                    <comment>
+                        <![CDATA[
+                            The regular expression to use to reject some characters.
+                            Default is '/[{}<>%]/' to reject characters like: { } < > %
+                        ]]>
+                    </comment>
+                    <depends>
+                        <field id="wapone_ifv/configuration/enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <!-- Notifications -->
+            <group id="notifications" translate="label comment" sortOrder="30"
+                   showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Notifications</label>
+                <depends>
+                    <field id="wapone_ifv/configuration/enabled">1</field>
+                </depends>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable invalidation fields results notification</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable invalidation fields results notification</comment>
+                    <depends>
+                        <field id="wapone_ifv/configuration/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="emails" translate="label comment" type="text" sortOrder="20"
+                       showInDefault="1" showInWebsite="0" showInStore="0" >
+                    <label>Email addresses for invalidation fields results notification</label>
+                    <depends>
+                        <field id="wapone_ifv/configuration/enabled">1</field>
+                        <field id="wapone_ifv/notifications/enabled">1</field>
+                    </depends>
+                    <comment>
+                        <![CDATA[
+                            Email addresses to receive invalidation fields results, comma separated.<br />
+                            Example: xxx@xxx.xx,yyy@yyy.yy,zzz@zzz.zz
+                        ]]>
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

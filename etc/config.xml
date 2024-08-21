@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <wapone_ifv>
+            <configuration>
+                <enabled>1</enabled>
+                <regex><![CDATA[/[{}<>%]/]]></regex>
+                <limit>30</limit>
+            </configuration>
+            <notifications>
+                <enabled>1</enabled>
+                <emails>xxx@xxx.xx,yyy@yyy.yy,zzz@zzz.zz</emails>
+            </notifications>
+        </wapone_ifv>
+    </default>
+</config>

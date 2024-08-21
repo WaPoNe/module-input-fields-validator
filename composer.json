@@ -1,0 +1,22 @@
+{
+    "name": "wapone/module-input-fields-validator",
+    "description": "Custom Magento 2 module for input fields validation.",
+    "require": {
+        "php": "^7||^8",
+        "magento/framework": "*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "WaPoNe\\InputFieldsValidator\\": ""
+        }
+    }
+}
