@@ -37,17 +37,17 @@ class Configurations
     }
 
     /**
-     * @return mixed
+     * Get RegEx configuration
      */
-    public function getRegEx(): mixed
+    public function getRegEx()
     {
         return $this->scopeConfig->getValue(Constants::REGEX_PATH);
     }
 
     /**
-     * @return mixed
+     * Get Characters Limit configuration
      */
-    public function getCharactersLimit(): mixed
+    public function getCharactersLimit()
     {
         return $this->scopeConfig->getValue(Constants::CHARACTERS_LIMIT_PATH);
     }
@@ -61,17 +61,17 @@ class Configurations
     }
 
     /**
-     * @return mixed
+     * Get Email To configuration
      */
-    public function getEmailTo(): mixed
+    public function getEmailTo()
     {
         return $this->scopeConfig->getValue(Constants::NOTIFICATIONS_EMAILS_PATH);
     }
 
     /**
-     * @return mixed
+     * Get Email From configuration
      */
-    public function getEmailFrom(): mixed
+    public function getEmailFrom()
     {
         return $this->scopeConfig->getValue(
             'trans_email/ident_general/email',
@@ -80,9 +80,9 @@ class Configurations
     }
 
     /**
-     * @return mixed
+     * Get Email From Name configuration
      */
-    public function getEmailFromName(): mixed
+    public function getEmailFromName()
     {
         return $this->scopeConfig->getValue(
             'trans_email/ident_general/name',

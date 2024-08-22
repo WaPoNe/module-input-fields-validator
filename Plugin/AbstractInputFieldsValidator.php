@@ -110,9 +110,9 @@ abstract class AbstractInputFieldsValidator
     }
 
     /**
-     * @return mixed
+     * Get Client IP
      */
-    private function _getClientIp(): mixed
+    private function _getClientIp()
     {
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
             return $_SERVER['HTTP_CLIENT_IP'];
