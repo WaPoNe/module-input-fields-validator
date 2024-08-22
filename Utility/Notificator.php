@@ -19,6 +19,21 @@ class Notificator
     private const EMAIL_TEMPLATE = 'wapone_ifv_alert';
 
     /**
+     * @var StateInterface
+     */
+    private StateInterface $inlineTranslation;
+
+    /**
+     * @var TransportBuilder
+     */
+    private TransportBuilder $transportBuilder;
+
+    /**
+     * @var Configurations
+     */
+    private Configurations $configurations;
+
+    /**
      * Notificator constructor.
      *
      * @param StateInterface $inlineTranslation
@@ -26,10 +41,13 @@ class Notificator
      * @param Configurations $configurations
      */
     public function __construct(
-        private readonly StateInterface $inlineTranslation,
-        private readonly TransportBuilder $transportBuilder,
-        private readonly Configurations $configurations
+        StateInterface $inlineTranslation,
+        TransportBuilder $transportBuilder,
+        Configurations $configurations
     ) {
+        $this->inlineTranslation = $inlineTranslation;
+        $this->transportBuilder = $transportBuilder;
+        $this->configurations = $configurations;
     }
 
     /**

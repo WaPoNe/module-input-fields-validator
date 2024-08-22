@@ -16,6 +16,21 @@ use WaPoNe\InputFieldsValidator\Logger\CustomLogger;
 abstract class AbstractInputFieldsValidator
 {
     /**
+     * @var Configurations
+     */
+    protected Configurations $configurations;
+
+    /**
+     * @var Notificator
+     */
+    protected Notificator $notificator;
+
+    /**
+     * @var CustomLogger
+     */
+    protected CustomLogger $logger;
+
+    /**
      * AbstractImporter constructor.
      *
      * @param Configurations $configurations
@@ -23,10 +38,13 @@ abstract class AbstractInputFieldsValidator
      * @param CustomLogger $logger
      */
     public function __construct(
-        readonly Configurations $configurations,
-        readonly Notificator $notificator,
-        readonly CustomLogger $logger
+        Configurations $configurations,
+        Notificator $notificator,
+        CustomLogger $logger
     ) {
+        $this->configurations = $configurations;
+        $this->notificator = $notificator;
+        $this->logger = $logger;
     }
 
     /**

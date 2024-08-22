@@ -10,16 +10,22 @@ use Magento\Store\Model\ScopeInterface;
 /**
  * Class Configurations
  */
-readonly class Configurations
+class Configurations
 {
+    /**
+     * @var ScopeConfigInterface
+     */
+    private ScopeConfigInterface $scopeConfig;
+
     /**
      * Configurations constructor.
      *
      * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(
-        public ScopeConfigInterface $scopeConfig
+        ScopeConfigInterface $scopeConfig
     ) {
+        $this->scopeConfig = $scopeConfig;
     }
 
     /**
