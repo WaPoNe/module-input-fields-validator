@@ -35,10 +35,10 @@ class OrderSourceLogger extends AbstractInputFieldsValidator
             try {
                 // Validate firstname and lastname with length limit
                 $this->validateInput(
-                    $order->getCustomerFirstname(), 'First Name', Constants::CHARACTERS_LIMIT_PATH
+                    $order->getCustomerFirstname(), 'First Name', $this->configurations->getCharactersLimit()
                 );
                 $this->validateInput(
-                    $order->getCustomerLastname(), 'Last Name', Constants::CHARACTERS_LIMIT_PATH
+                    $order->getCustomerLastname(), 'Last Name', $this->configurations->getCharactersLimit()
                 );
 
                 // Validate company and other address fields for disallowed characters
