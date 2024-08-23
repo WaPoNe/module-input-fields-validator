@@ -1,5 +1,9 @@
 # WaPoNe Input Fields Validator
 
+## [1.1.3] - 23/08/2024
+### Fixed
+- Use correct limit value instead of the path to the config value. (@g48r137)
+
 ## [1.1.2] - 22/08/2024
 ### Fixed
 - PHP 7 compatibility (removed 'mixed' type)
