@@ -55,6 +55,14 @@ class Configurations
     /**
      * @return bool
      */
+    public function isRegionValidationEnabled(): bool
+    {
+        return $this->scopeConfig->isSetFlag(Constants::REGION_ENABLED_PATH);
+    }
+
+    /**
+     * @return bool
+     */
     public function isNotificationsEnabled(): bool
     {
         return $this->scopeConfig->isSetFlag(Constants::NOTIFICATIONS_ENABLED_PATH);

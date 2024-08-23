@@ -7,6 +7,7 @@
                 <enabled>1</enabled>
                 <regex><![CDATA[/[{}<>%]/]]></regex>
                 <limit>30</limit>
+                <region>1</region>
             </configuration>
             <notifications>
                 <enabled>1</enabled>

@@ -1,5 +1,9 @@
 # WaPoNe Input Fields Validator
 
+## [1.2.0] - 23/08/2024
+### Added
+- Configuration to set region fields validation
+
 ## [1.1.3] - 23/08/2024
 ### Fixed
 - Use correct limit value instead of the path to the config value. (@g48r137)

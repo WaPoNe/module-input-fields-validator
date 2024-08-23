@@ -18,12 +18,13 @@ It is also possible to configure a limit of characters to use only for the first
 ## Configurations
 
 ### Configuration Section
-- Enable: enable/disable module.
-- Regular Expression: the regular expression to reject input values.
-- Characters Limit: the limit of characters to use only for the firstname and lastname fields validation.
+- Enable: enable/disable module;
+- Regular Expression: the regular expression to reject input values;
+- Characters Limit: the limit of characters to use only for the firstname and lastname fields validation;
+- Region Fields Validation: enable/disable the validation of region fields.
 
 ### Notifications Section
-- Enable invalidation fields results notification: enable/disable invalidation fields results notification.
+- Enable invalidation fields results notification: enable/disable invalidation fields results notification;
 - Email addresses for invalidation fields results notification: Email addresses to receive invalidation fields results.
 
 ## Notification

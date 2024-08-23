@@ -47,6 +47,12 @@
                         <field id="wapone_ifv/configuration/enabled">1</field>
                     </depends>
                 </field>
+                <field id="region" translate="label comment" type="select" sortOrder="40"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Region Fields Validation</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable the validation of region fields</comment>
+                </field>
             </group>
             <!-- Notifications -->
             <group id="notifications" translate="label comment" sortOrder="30"
